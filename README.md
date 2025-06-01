@@ -10,7 +10,7 @@ A comprehensive portfolio analysis tool with S&P 500 benchmarking capabilities.
 - Asset correlation analysis
 
 ## Live Demo
-[Your Streamlit App URL will go here]
+Streamlit App: https://multi-asset-portfolio-optimizer-and-risk-dashboard-ihbd.streamlit.app 
 
 ## How to Run Locally
 ```bash
