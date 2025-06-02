@@ -42,16 +42,6 @@ st.markdown("""
         font-weight: 600;
         color: inherit;
     }
-
-    div[data-testid="stMetric"] > div {
-        color: inherit;
-    }
-
-    /* Don't override delta arrow color (green/red) */
-    div[data-testid="stMetric"] svg {
-        filter: none !important;
-    }
-
 </style>
 """, unsafe_allow_html=True)
 
