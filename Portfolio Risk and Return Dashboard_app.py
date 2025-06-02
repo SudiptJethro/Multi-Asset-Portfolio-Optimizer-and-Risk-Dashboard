@@ -20,6 +20,7 @@ st.set_page_config(
 # Custom CSS for better styling
 st.markdown("""
 <style>
+    /* Main title */
     .main-header {
         font-size: 2.5rem;
         font-weight: bold;
@@ -27,20 +28,30 @@ st.markdown("""
         text-align: center;
         margin-bottom: 2rem;
     }
-    /* Make st.metric cards theme-aware */
+    /* Style for metric cards */
     div[data-testid="stMetric"] {
-        background-color: rgba(240, 248, 255, 0.05); /* light transparent bg */
+        background-color: rgba(240, 248, 255, 0.05);  /* subtle transparent */
         padding: 1rem;
         border-radius: 0.75rem;
         border-left: 4px solid #1f77b4;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  /* soft shadow */
         margin-bottom: 1rem;
     }
-    /* Optional: force label and value to be readable in dark mode */
-    div[data-testid="stMetric"] > label, 
+    /* Ensure metric label and number adapt to theme */
+    div[data-testid="stMetric"] > label {
+        font-weight: 600;
+        color: inherit;
+    }
+
     div[data-testid="stMetric"] > div {
         color: inherit;
     }
+
+    /* Don't override delta arrow color (green/red) */
+    div[data-testid="stMetric"] svg {
+        filter: none !important;
+    }
+
 </style>
 """, unsafe_allow_html=True)
 
