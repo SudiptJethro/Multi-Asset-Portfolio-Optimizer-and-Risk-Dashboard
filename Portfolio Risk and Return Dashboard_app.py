@@ -27,38 +27,21 @@ st.markdown("""
         text-align: center;
         margin-bottom: 2rem;
     }
-    /* Auto-adapt to light/dark theme */
+    /* Make st.metric cards theme-aware */
     div[data-testid="stMetric"] {
-        background-color: rgba(32, 35, 45, 0.6); /* dark semi-transparent background */
+        background-color: rgba(240, 248, 255, 0.05); /* light transparent bg */
         padding: 1rem;
-        border-radius: 10px;
+        border-radius: 0.75rem;
         border-left: 4px solid #1f77b4;
-        color: white !important;
+        margin-bottom: 1rem;
     }
-    /* Optional: bolden the label */
-    div[data-testid="stMetric"] > label {
-        font-weight: 600;
-        color: #dddddd;
+    /* Optional: force label and value to be readable in dark mode */
+    div[data-testid="stMetric"] > label, 
+    div[data-testid="stMetric"] > div {
+        color: inherit;
     }
 </style>
 """, unsafe_allow_html=True)
-
-# 🧠 Sample mapping of common Indian stock names to NSE tickers
-INDIAN_NAME_TO_TICKER = {
-    "reliance": "RELIANCE",
-    "tcs": "TCS",
-    "hdfc bank": "HDFCBANK",
-    "infosys": "INFY",
-    "sbi": "SBIN",
-    "hdfc": "HDFC",
-    "itc": "ITC",
-    "icici bank": "ICICIBANK",
-    "bharti airtel": "BHARTIARTL",
-    "l&t": "LT",
-    "niftybees": "NIFTYBEES",
-    "setfgold": "SETFGOLD",
-    # Add more as needed
-}
 
 # Title
 st.markdown('<h1 class="main-header">📊 Portfolio Risk and Multi-Asset Allocation Dashboard</h1>', unsafe_allow_html=True)
