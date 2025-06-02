@@ -27,17 +27,18 @@ st.markdown("""
         text-align: center;
         margin-bottom: 2rem;
     }
-    .metric-card {
-        background-color: #f0f2f6;
+    /* Auto-adapt to light/dark theme */
+    div[data-testid="stMetric"] {
+        background-color: rgba(32, 35, 45, 0.6); /* dark semi-transparent background */
         padding: 1rem;
-        border-radius: 0.5rem;
+        border-radius: 10px;
         border-left: 4px solid #1f77b4;
+        color: white !important;
     }
-    .stMetric {
-        background-color: white;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    /* Optional: bolden the label */
+    div[data-testid="stMetric"] > label {
+        font-weight: 600;
+        color: #dddddd;
     }
 </style>
 """, unsafe_allow_html=True)
