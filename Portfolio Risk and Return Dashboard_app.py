@@ -17,6 +17,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# Custom CSS for better styling
 st.markdown("""
 <style>
     .main-header {
@@ -26,17 +27,18 @@ st.markdown("""
         text-align: center;
         margin-bottom: 2rem;
     }
-
-    /* Custom metric card styling */
-    div[data-testid="stMetric"] {
-        background-color: rgba(44, 44, 44, 0.9);
+    .metric-card {
+        background-color: #f0f2f6;
         padding: 1rem;
-        border-radius: 0.75rem;
-        border-left: 4px solid #2c2c2c;
-        margin-bottom: 1rem;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        border-radius: 0.5rem;
+        border-left: 4px solid #1f77b4;
     }
-
+    .stMetric {
+        background-color: white;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
     /* Inherit text color for dark mode compatibility */
     div[data-testid="stMetric"] > label,
     div[data-testid="stMetric"] > div {
