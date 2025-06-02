@@ -17,7 +17,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for better styling
 st.markdown("""
 <style>
     .main-header {
@@ -27,17 +26,19 @@ st.markdown("""
         text-align: center;
         margin-bottom: 2rem;
     }
-    /* Make st.metric cards theme-aware */
+
+    /* Custom metric card styling */
     div[data-testid="stMetric"] {
-        background-color: rgba(240, 248, 255, 0.05); /* light transparent bg */
+        background-color: rgba(44, 44, 44, 0.9);
         padding: 1rem;
         border-radius: 0.75rem;
-        border-left: 4px solid #1f77b4;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        border-left: 4px solid #2c2c2c;
         margin-bottom: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
-    /* Optional: force label and value to be readable in dark mode */
-    div[data-testid="stMetric"] > label, 
+
+    /* Inherit text color for dark mode compatibility */
+    div[data-testid="stMetric"] > label,
     div[data-testid="stMetric"] > div {
         color: inherit;
     }
