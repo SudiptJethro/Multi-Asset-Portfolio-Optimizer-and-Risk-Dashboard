@@ -367,7 +367,7 @@ if st.sidebar.button("Analyze Portfolio", type="primary"):
                 with col3:
                     st.markdown("**Relative Performance**")
                     return_diff = portfolio_metrics['Annual Return'] - benchmark_metrics['Annual Return']
-                    st.metric("Excess Return", f"{return_diff:.2%}", delta=f"{return_diff:.2%}")
+                    st.metric("Excess Return", f"{return_diff:.2%}", delta=return_diff)
                     st.metric("Alpha", f"{relative_metrics['Alpha']:.2%}")
                     st.metric("Beta", f"{relative_metrics['Beta']:.3f}")
                     st.metric("Information Ratio", f"{relative_metrics['Information Ratio']:.3f}")
