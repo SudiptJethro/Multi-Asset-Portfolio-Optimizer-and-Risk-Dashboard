@@ -29,7 +29,7 @@ st.markdown("""
     }
     /* Make st.metric cards theme-aware */
     div[data-testid="stMetric"] {
-        background-color: rgba(28, 35, 65, 0.9); /* light transparent bg */
+        background-color: rgba(240, 248, 255, 0.05); /* light transparent bg */
         padding: 1rem;
         border-radius: 0.75rem;
         border-left: 4px solid #1f77b4;
